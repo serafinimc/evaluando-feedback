@@ -109,9 +109,6 @@ export default function App() {
       </header>
 
       <main>
-        {tab === 'history' && (
-          <div className="privacy-banner"><Icon name="lock" size={19} /><p>Tus evaluaciones se guardan únicamente en este dispositivo. Podés exportarlas e importar otras desde el menú superior derecho.</p></div>
-        )}
         {tab === 'questions'
           ? <QuestionsView />
           : <HistoryView evaluations={evaluations} onSelect={showDetail} onCreate={createEvaluation} />}

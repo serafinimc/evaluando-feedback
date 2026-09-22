@@ -10,6 +10,11 @@ interface HistoryViewProps {
 export function HistoryView(props: HistoryViewProps) {
   return (
     <section aria-labelledby="history-title">
+      <p className="history-privacy-note">
+        Los registros se guardan localmente en cada dispositivo y se eliminan al borrar los datos del sitio.
+        <br />
+        Podés exportarlos o importar una copia previa desde el menú superior derecho.
+      </p>
       <div className="view-heading">
         <p className="eyebrow">Tu recorrido</p>
         <h1 id="history-title">Historial</h1>

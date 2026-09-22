@@ -34,13 +34,11 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .icon-button:hover { background: #eef2f6; }
 
 main { width: 100%; max-width: 720px; margin: 0 auto; padding: 20px 16px calc(166px + env(safe-area-inset-bottom)); }
-.privacy-banner { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 26px; padding: 13px 14px; color: #315367; background: var(--teal-soft); border: 1px solid #b9dfdd; border-radius: 14px; font-size: .9rem; }
-.privacy-banner .icon { margin-top: 1px; color: var(--teal-dark); }
-.privacy-banner p { margin: 0; }
 .view-heading { margin: 0 2px 22px; }
 .view-heading .eyebrow, .eyebrow { margin: 0 0 5px; color: var(--teal-dark); font-size: .78rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 .view-heading h1 { max-width: 590px; margin: 0 0 8px; color: var(--navy); font-size: clamp(1.7rem, 7vw, 2.3rem); line-height: 1.13; letter-spacing: -.025em; }
 .view-heading > p:last-child { margin: 0; color: var(--muted); }
+.history-privacy-note { margin: -8px 2px 22px; color: var(--muted); font-size: .88rem; }
 
 .question-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .question-list li { display: grid; grid-template-columns: 40px minmax(0, 1fr); align-items: start; gap: 12px; padding: 17px 16px; background: var(--surface); border: 1px solid #e1e8ef; border-radius: 17px; box-shadow: 0 2px 8px rgba(23, 50, 77, .035); }
