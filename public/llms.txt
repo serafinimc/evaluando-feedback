@@ -1,0 +1,3 @@
+# Evaluando feedback
+
+Aplicación privada y local para evaluar feedback mediante una escala de doce preguntas.

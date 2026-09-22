@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90de33e6-2fe3-4095-94fa-da5f47b54d56" name="Changes" comment="feat: implementar PWA Evaluando feedback&#10;&#10;- añade evaluación guiada mediante 12 preguntas&#10;- calcula y muestra recomendaciones según el puntaje&#10;- guarda el historial privado en IndexedDB&#10;- permite exportar, importar y borrar evaluaciones&#10;- incorpora navegación móvil, FAB y modales accesibles&#10;- añade manifest, service worker y funcionamiento offline&#10;- incluye pruebas de puntuación y validación de archivos JSON&#10;- prepara el build para Cloudflare Pages, GitHub Pages y Vercel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HistoryList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HistoryList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/scoring.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/scoring.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="2.0635772782016946" />
+      <entry key="MS500" value="5.700819730554405" />
+      <entry key="S2" value="18.810086861604443" />
+      <entry key="S5" value="41.338815171772964" />
+      <entry key="S10" value="74.02100920942769" />
+      <entry key="S30" value="146.3376939193984" />
+      <entry key="S60" value="200.71315248142324" />
+      <entry key="M2" value="279.7956259429438" />
+      <entry key="M5" value="407.32001199294535" />
+      <entry key="M10" value="489.2236576231903" />
+      <entry key="M15" value="524.84980303513" />
+      <entry key="M30" value="566.0561954424068" />
+      <entry key="H1" value="589.1034728871196" />
+      <entry key="H2" value="601.309271883894" />
+      <entry key="H4" value="607.5925380742167" />
+      <entry key="D1" value="612.9233358968447" />
+      <entry key="W1" value="613.8459747580924" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.0127740456584724" />
+      <entry key="MS500" value="5.669988742167019" />
+      <entry key="S2" value="18.78182010269274" />
+      <entry key="S5" value="41.3128738308485" />
+      <entry key="S10" value="73.99666289603172" />
+      <entry key="S30" value="146.31972008690906" />
+      <entry key="S60" value="200.7003207895794" />
+      <entry key="M2" value="279.7866085996716" />
+      <entry key="M5" value="407.3147705643312" />
+      <entry key="M10" value="489.22051405224715" />
+      <entry key="M15" value="524.8475557917703" />
+      <entry key="M30" value="566.0549842138054" />
+      <entry key="H1" value="589.1028427783589" />
+      <entry key="H2" value="601.3089503441577" />
+      <entry key="H4" value="607.5923756351931" />
+      <entry key="D1" value="612.923308587661" />
+      <entry key="W1" value="613.8459708509438" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3Jgy9GL7Gy2ZHiPMeWAT4MGdmxm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.scoring.ts.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "javascript.preferred.runtime.type.id": "node",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "ts.external.directory.path": "D:\\WebstormProjects\\Handout22\\node_modules\\typescript\\lib"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90de33e6-2fe3-4095-94fa-da5f47b54d56" name="Changes" comment="" />
+      <created>1790096856479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790096856479</updated>
+      <workItem from="1790096857404" duration="2833000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: implementar PWA Evaluando feedback&#10;&#10;- añade evaluación guiada mediante 12 preguntas&#10;- calcula y muestra recomendaciones según el puntaje&#10;- guarda el historial privado en IndexedDB&#10;- permite exportar, importar y borrar evaluaciones&#10;- incorpora navegación móvil, FAB y modales accesibles&#10;- añade manifest, service worker y funcionamiento offline&#10;- incluye pruebas de puntuación y validación de archivos JSON&#10;- prepara el build para Cloudflare Pages, GitHub Pages y Vercel">
+      <option name="closed" value="true" />
+      <created>1790099309119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1790099309119</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: implementar PWA Evaluando feedback&#10;&#10;- añade evaluación guiada mediante 12 preguntas&#10;- calcula y muestra recomendaciones según el puntaje&#10;- guarda el historial privado en IndexedDB&#10;- permite exportar, importar y borrar evaluaciones&#10;- incorpora navegación móvil, FAB y modales accesibles&#10;- añade manifest, service worker y funcionamiento offline&#10;- incluye pruebas de puntuación y validación de archivos JSON&#10;- prepara el build para Cloudflare Pages, GitHub Pages y Vercel">
+      <option name="closed" value="true" />
+      <created>1790099371122</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790099371122</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: implementar PWA Evaluando feedback&#10;&#10;- añade evaluación guiada mediante 12 preguntas&#10;- calcula y muestra recomendaciones según el puntaje&#10;- guarda el historial privado en IndexedDB&#10;- permite exportar, importar y borrar evaluaciones&#10;- incorpora navegación móvil, FAB y modales accesibles&#10;- añade manifest, service worker y funcionamiento offline&#10;- incluye pruebas de puntuación y validación de archivos JSON&#10;- prepara el build para Cloudflare Pages, GitHub Pages y Vercel" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implementar PWA Evaluando feedback&#10;&#10;- añade evaluación guiada mediante 12 preguntas&#10;- calcula y muestra recomendaciones según el puntaje&#10;- guarda el historial privado en IndexedDB&#10;- permite exportar, importar y borrar evaluaciones&#10;- incorpora navegación móvil, FAB y modales accesibles&#10;- añade manifest, service worker y funcionamiento offline&#10;- incluye pruebas de puntuación y validación de archivos JSON&#10;- prepara el build para Cloudflare Pages, GitHub Pages y Vercel" />
+  </component>
+</project>
