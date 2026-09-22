@@ -33,6 +33,10 @@ export default function App() {
     return () => window.clearTimeout(timeout)
   }, [toast])
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [tab])
+
   const createEvaluation = () => {
     setSelected(null)
     setModal('form')
