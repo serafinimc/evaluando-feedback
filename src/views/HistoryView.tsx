@@ -1,10 +1,12 @@
 import type { Evaluation } from '../types'
+import type { Questionnaire } from '../lib/questionnaire'
 import { HistoryList } from '../components/HistoryList'
 
 interface HistoryViewProps {
   evaluations: Evaluation[]
   onSelect: (evaluation: Evaluation) => void
   onCreate: () => void
+  questionnaire: Questionnaire
 }
 
 export function HistoryView(props: HistoryViewProps) {

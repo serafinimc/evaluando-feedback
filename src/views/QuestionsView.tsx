@@ -1,15 +1,15 @@
-import { questions } from '../data/questions'
+import type { Questionnaire } from '../lib/questionnaire'
 
-export function QuestionsView() {
+export function QuestionsView({ questionnaire }: { questionnaire: Questionnaire }) {
   return (
     <section aria-labelledby="questions-title">
       <div className="view-heading">
-        <p className="eyebrow">La escala</p>
-        <h1 id="questions-title">12 preguntas para mirar el feedback</h1>
-        <p>Úsalas como guía para decidir cuánto peso darle a lo que recibiste.</p>
+        <p className="eyebrow">{questionnaire.heading.eyebrow}</p>
+        <h1 id="questions-title">{questionnaire.heading.title.replace('{count}', String(questionnaire.questions.length))}</h1>
+        <p>{questionnaire.heading.description}</p>
       </div>
       <ol className="question-list">
-        {questions.map((question, index) => <li key={question}><span>{index + 1}</span><p>{question}</p></li>)}
+        {questionnaire.questions.map((question, index) => <li key={question.id}><span>{index + 1}</span><p>{question.text}</p></li>)}
       </ol>
     </section>
   )

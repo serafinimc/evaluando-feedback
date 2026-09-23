@@ -4,4 +4,13 @@ export interface Evaluation {
   situation: string
   checkedQuestions: number[]
   score: number
+  questionnaireId?: string
+  questionnaireVersion?: number
+  maxScore?: number
+  recommendation?: Recommendation
+}
+
+export interface Recommendation {
+  title: string
+  text: string
 }

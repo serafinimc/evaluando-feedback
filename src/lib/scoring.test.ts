@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { questionnaire } from './questionnaire'
 import { getRecommendation } from './scoring'
 
 describe('getRecommendation', () => {
@@ -16,6 +17,6 @@ describe('getRecommendation', () => {
     [11, 'Aceptar el feedback'],
     [12, 'Aceptar el feedback'],
   ])('asigna el puntaje %i a la recomendación correcta', (score, title) => {
-    expect(getRecommendation(score).title).toBe(title)
+    expect(getRecommendation(score, questionnaire.scoring.criteria).title).toBe(title)
   })
 })

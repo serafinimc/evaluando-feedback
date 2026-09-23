@@ -7,6 +7,7 @@ import { Modal } from './components/Modal'
 import { ResultCard } from './components/ResultCard'
 import { SpeedDial } from './components/SpeedDial'
 import { clearEvaluations, getEvaluations, importEvaluations, parseHistoryFile, saveEvaluation } from './lib/storage'
+import { questionnaire } from './lib/questionnaire'
 import type { Evaluation } from './types'
 import { HistoryView } from './views/HistoryView'
 import { QuestionsView } from './views/QuestionsView'
@@ -110,8 +111,8 @@ export default function App() {
 
       <main>
         {tab === 'questions'
-          ? <QuestionsView />
-          : <HistoryView evaluations={evaluations} onSelect={showDetail} onCreate={createEvaluation} />}
+          ? <QuestionsView questionnaire={questionnaire} />
+          : <HistoryView evaluations={evaluations} onSelect={showDetail} onCreate={createEvaluation} questionnaire={questionnaire} />}
       </main>
 
       <input ref={fileInput} className="sr-only" type="file" accept="application/json,.json" onChange={handleImport} aria-label="Seleccionar archivo de historial JSON" />
@@ -119,10 +120,10 @@ export default function App() {
       <BottomNavigation active={tab} onChange={setTab} />
 
       <Modal open={modal === 'form'} title="Nueva evaluación" onClose={() => setModal('closed')} wide>
-        <EvaluationForm onSubmit={finishEvaluation} />
+        <EvaluationForm onSubmit={finishEvaluation} questionnaire={questionnaire} />
       </Modal>
       <Modal open={modal === 'result'} title="Resultado" onClose={() => setModal('closed')}>
-        {selected && <ResultCard evaluation={selected} />}
+        {selected && <ResultCard evaluation={selected} questionnaire={questionnaire} />}
         <button className="primary-button modal-done" onClick={() => setModal('closed')}>Listo</button>
       </Modal>
 

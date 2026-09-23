@@ -50,11 +50,18 @@ function isEvaluation(value: unknown): value is Evaluation {
     && typeof item.situation === 'string'
     && Number.isInteger(item.score)
     && (item.score as number) >= 0
-    && (item.score as number) <= 12
     && Array.isArray(item.checkedQuestions)
-    && item.checkedQuestions.length === item.score
-    && item.checkedQuestions.every((number) => Number.isInteger(number) && number >= 1 && number <= 12)
+    && item.checkedQuestions.every((number) => Number.isInteger(number) && number >= 1)
     && new Set(item.checkedQuestions).size === item.checkedQuestions.length
+    && (item.questionnaireId === undefined || typeof item.questionnaireId === 'string')
+    && (item.questionnaireVersion === undefined || (Number.isInteger(item.questionnaireVersion) && (item.questionnaireVersion as number) > 0))
+    && (item.maxScore === undefined || (Number.isInteger(item.maxScore) && (item.maxScore as number) > 0 && (item.score as number) <= (item.maxScore as number)))
+    && (item.recommendation === undefined || (
+      !!item.recommendation
+      && typeof item.recommendation === 'object'
+      && typeof (item.recommendation as Record<string, unknown>).title === 'string'
+      && typeof (item.recommendation as Record<string, unknown>).text === 'string'
+    ))
 }
 
 export function parseHistoryFile(contents: string): Evaluation[] {

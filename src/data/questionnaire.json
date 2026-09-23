@@ -1,0 +1,37 @@
+{
+  "id": "evaluando-feedback",
+  "version": 1,
+  "heading": {
+    "eyebrow": "La escala",
+    "title": "{count} preguntas para mirar el feedback",
+    "description": "Úsalas como guía para decidir cuánto peso darle a lo que recibiste."
+  },
+  "form": {
+    "instruction": "Marca únicamente las afirmaciones que sean ciertas. Las demás cuentan como ‘no’."
+  },
+  "questions": [
+    { "id": 1, "text": "¿Tiene esta persona más experiencia que yo en este tema?", "points": 1 },
+    { "id": 2, "text": "¿Aceptar el feedback ayudaría a cuidar mi relación con esta persona?", "points": 1 },
+    { "id": 3, "text": "¿Ayudaría a mantener o mejorar otras relaciones importantes?", "points": 1 },
+    { "id": 4, "text": "¿Estoy descartando los comentarios para molestar o castigar a la persona a propósito?", "points": 1 },
+    { "id": 5, "text": "Si hiciera falta, ¿soy capaz de realizar los cambios sugeridos?", "points": 1 },
+    { "id": 6, "text": "¿Aceptar los comentarios me ayudaría a evitar problemas importantes (dinero, trabajo, ley)?", "points": 1 },
+    { "id": 7, "text": "¿La persona me habló de forma tranquila y serena?", "points": 1 },
+    { "id": 8, "text": "¿El feedback se refiere a la situación actual, en lugar de al pasado o al futuro?", "points": 1 },
+    { "id": 9, "text": "¿Tengo una relación afectiva a largo plazo con esta persona?", "points": 1 },
+    { "id": 10, "text": "¿Ya he recibido antes un feedback parecido de otras personas?", "points": 1 },
+    { "id": 11, "text": "¿Estos comentarios me ponen tenso/a o me frustran?", "points": 1 },
+    { "id": 12, "text": "¿Me estoy diciendo a mí mismx: «Sé que tengo razón», sin importar lo que diga la otra persona o cómo parezcan las cosas?", "points": 1 }
+  ],
+  "scoring": {
+    "criteria": [
+      { "minScore": 11, "title": "Aceptar el feedback", "text": "Acepta la retroalimentación como precisa y efectiva, aunque incomode." },
+      { "minScore": 9, "title": "Probablemente aceptarlo", "text": "Acepta la retroalimentación como probablemente precisa y efectiva." },
+      { "minScore": 7, "title": "Seguir evaluando", "text": "Acepta la retroalimentación como probablemente precisa y efectiva: seguir comprobando si es útil o verdadero." },
+      { "minScore": 5, "title": "Aceptar con cautela", "text": "Acepta tentativamente la retroalimentación." },
+      { "minScore": 3, "title": "Rechazar provisionalmente", "text": "Rechaza provisionalmente la retroalimentación, manteniendo la mente abierta." },
+      { "minScore": 0, "title": "Rechazar el feedback", "text": "Rechaza la retroalimentación." }
+    ],
+    "pauseNote": "Si estás activado/a, regula primero tu cuerpo. Luego vuelve a la escala con curiosidad."
+  }
+}

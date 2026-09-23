@@ -21,8 +21,9 @@ describe('parseHistoryFile', () => {
   it.each([
     ['texto roto', 'El archivo no contiene JSON válido.'],
     [JSON.stringify({ anything: [] }), 'El archivo no tiene el formato de historial esperado.'],
-    [JSON.stringify([{ ...evaluation, score: 4 }]), 'El archivo no tiene el formato de historial esperado.'],
+    [JSON.stringify([{ ...evaluation, score: -1 }]), 'El archivo no tiene el formato de historial esperado.'],
     [JSON.stringify([{ ...evaluation, checkedQuestions: [1, 1, 2] }]), 'El archivo no tiene el formato de historial esperado.'],
+    [JSON.stringify([{ ...evaluation, maxScore: 2 }]), 'El archivo no tiene el formato de historial esperado.'],
   ])('rechaza archivos inválidos', (contents, message) => {
     expect(() => parseHistoryFile(contents)).toThrow(message)
   })
