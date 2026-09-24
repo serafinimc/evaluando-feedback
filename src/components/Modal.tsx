@@ -1,11 +1,11 @@
-import { useEffect, useId, useRef } from 'react'
+import { useEffect, useId, useRef, type ReactNode } from 'react'
 import { Icon } from './Icon'
 
 interface ModalProps {
   open: boolean
   title: string
   onClose: () => void
-  children: React.ReactNode
+  children: ReactNode
   wide?: boolean
 }
 

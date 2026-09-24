@@ -61,7 +61,7 @@ restantes | 2 | Resultado alto | Explicación del resultado.
 restantes | 0 | Resultado bajo | Explicación del resultado.
 ```
 
-Cada pregunta debe pertenecer a una subescala. El primer resultado cuyo mínimo se cumpla determina la recomendación, por lo que las reglas determinantes deben escribirse antes que los rangos secundarios. `templates/deshonra.txt` contiene un ejemplo completo.
+Cada pregunta debe pertenecer a una subescala. El primer resultado cuyo mínimo se cumpla determina la recomendación, por lo que las reglas determinantes deben escribirse antes que los rangos secundarios. `templates/verguenza.txt` contiene un ejemplo completo.
 
 ## Desarrollo
 

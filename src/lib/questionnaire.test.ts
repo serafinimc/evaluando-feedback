@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import questionnaireData from '../data/questionnaires/feedback.json'
-import multiScaleData from '../data/questionnaires/deshonra.json'
+import multiScaleData from '../data/questionnaires/verguenza.json'
 import { calculateScore, getMaxScore, parseQuestionnaire } from './questionnaire'
 
 describe('questionnaire', () => {

@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, type SyntheticEvent } from 'react'
 import { calculateScore, getMaxScore, getScoreBreakdown, type Questionnaire } from '../lib/questionnaire'
 import { getQuestionnaireRecommendation } from '../lib/scoring'
 import type { Evaluation } from '../types'
@@ -22,7 +22,7 @@ export function EvaluationForm({ onSubmit, questionnaire }: EvaluationFormProps)
     })
   }
 
-  const submit = (event: React.FormEvent) => {
+  const submit = (event: SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault()
     const checkedQuestions = [...checked].sort((a, b) => a - b)
     const scoreBreakdown = getScoreBreakdown(questionnaire, checkedQuestions)

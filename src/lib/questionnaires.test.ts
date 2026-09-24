@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import shameData from '../data/questionnaires/deshonra.json'
+import shameData from '../data/questionnaires/verguenza.json'
 import feedbackData from '../data/questionnaires/feedback.json'
 import { createQuestionnaireCatalog } from './questionnaires'
 
@@ -7,7 +7,7 @@ describe('questionnaire catalog', () => {
   it('carga y ordena todas las hojas', () => {
     const catalog = createQuestionnaireCatalog([shameData, feedbackData])
 
-    expect(catalog.map((item) => item.slug)).toEqual(['feedback', 'deshonra'])
+    expect(catalog.map((item) => item.slug)).toEqual(['feedback', 'verguenza'])
   })
 
   it('rechaza ids y rutas repetidas', () => {

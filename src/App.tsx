@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { BottomNavigation, type Tab } from './components/BottomNavigation'
 import { DataMenu } from './components/DataMenu'
 import { EvaluationForm } from './components/EvaluationForm'
@@ -109,17 +109,19 @@ export default function App() {
     setToast('Historial descargado.')
   }
 
-  const handleImport = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImport = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]
     event.target.value = ''
     if (!file || !questionnaire) return
     try {
       const parsed = parseHistoryFile(await file.text())
       if (questionnaire.id !== 'evaluando-feedback' && parsed.some((evaluation) => !evaluation.questionnaireId)) {
-        throw new Error('Este historial pertenece al formato anterior de la escala de feedback.')
+        setToast('Este historial pertenece al formato anterior de la escala de feedback.')
+        return
       }
       if (parsed.some((evaluation) => evaluation.questionnaireId && evaluation.questionnaireId !== questionnaire.id)) {
-        throw new Error(`El archivo corresponde a otra escala, no a “${questionnaire.name}”.`)
+        setToast(`El archivo corresponde a otra escala, no a “${questionnaire.name}”.`)
+        return
       }
       const imported = parsed.map((evaluation) => ({ ...evaluation, questionnaireId: evaluation.questionnaireId ?? questionnaire.id }))
       await importEvaluations(imported)

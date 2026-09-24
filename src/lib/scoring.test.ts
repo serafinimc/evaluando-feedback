@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import questionnaireData from '../data/questionnaires/feedback.json'
-import multiScaleData from '../data/questionnaires/deshonra.json'
+import multiScaleData from '../data/questionnaires/verguenza.json'
 import { getScoreBreakdown, parseQuestionnaire } from './questionnaire'
 import { getQuestionnaireRecommendation, getRecommendation } from './scoring'
 
@@ -29,7 +29,7 @@ describe('getQuestionnaireRecommendation', () => {
   const multiScale = parseQuestionnaire(multiScaleData)
 
   it.each([
-    [[1], 'Deshonra justificada'],
+    [[1], 'Vergüenza justificada'],
     [[4, 5, 6, 7, 8, 9, 10], 'Probablemente justificada'],
     [[4, 5, 6, 7], 'Parcialmente justificada'],
     [[], 'Probablemente injustificada'],

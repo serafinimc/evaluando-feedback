@@ -54,7 +54,7 @@ describe('text questionnaire importer', () => {
   })
 
   it('importa pasos, notas y reglas para dos subescalas', () => {
-    const contents = readFileSync(new URL('../templates/deshonra.txt', import.meta.url), 'utf8')
+    const contents = readFileSync(new URL('../templates/verguenza.txt', import.meta.url), 'utf8')
     const result = parseQuestionnaireText(contents)
 
     expect(result.introSteps).toHaveLength(4)
