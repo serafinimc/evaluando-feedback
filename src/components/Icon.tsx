@@ -1,10 +1,12 @@
+import type { ReactNode } from 'react'
+
 interface IconProps {
   name: 'questions' | 'history' | 'plus' | 'close' | 'more' | 'download' | 'upload' | 'trash' | 'lock' | 'check'
   size?: number
 }
 
 export function Icon({ name, size = 24 }: IconProps) {
-  const paths: Record<IconProps['name'], React.ReactNode> = {
+  const paths: Record<IconProps['name'], ReactNode> = {
     questions: <><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 5.5v15A2.5 2.5 0 0 1 6.5 18"/><path d="M8 7h8M8 11h6"/></>,
     history: <><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></>,
     plus: <path d="M12 5v14M5 12h14"/>,

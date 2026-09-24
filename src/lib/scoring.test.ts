@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { questionnaire } from './questionnaire'
-import { getRecommendation } from './scoring'
+import questionnaireData from '../data/questionnaires/feedback.json'
+import multiScaleData from '../data/questionnaires/verguenza.json'
+import { getScoreBreakdown, parseQuestionnaire } from './questionnaire'
+import { getQuestionnaireRecommendation, getRecommendation } from './scoring'
+
+const questionnaire = parseQuestionnaire(questionnaireData)
 
 describe('getRecommendation', () => {
   it.each([
@@ -17,6 +21,20 @@ describe('getRecommendation', () => {
     [11, 'Aceptar el feedback'],
     [12, 'Aceptar el feedback'],
   ])('asigna el puntaje %i a la recomendación correcta', (score, title) => {
-    expect(getRecommendation(score, questionnaire.scoring.criteria).title).toBe(title)
+    expect(getRecommendation(score, questionnaire.scoring!.criteria!).title).toBe(title)
+  })
+})
+
+describe('getQuestionnaireRecommendation', () => {
+  const multiScale = parseQuestionnaire(multiScaleData)
+
+  it.each([
+    [[1], 'Vergüenza justificada'],
+    [[4, 5, 6, 7, 8, 9, 10], 'Probablemente justificada'],
+    [[4, 5, 6, 7], 'Parcialmente justificada'],
+    [[], 'Probablemente injustificada'],
+  ])('prioriza y evalúa las subescalas para %j', (checked, title) => {
+    const result = getQuestionnaireRecommendation(multiScale, getScoreBreakdown(multiScale, checked))
+    expect(result?.title).toBe(title)
   })
 })

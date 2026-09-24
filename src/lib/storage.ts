@@ -37,8 +37,22 @@ export async function saveEvaluation(evaluation: Evaluation): Promise<void> {
   await useStore<IDBValidKey>('readwrite', (store) => store.put(evaluation))
 }
 
-export async function clearEvaluations(): Promise<void> {
-  await useStore<undefined>('readwrite', (store) => store.clear())
+export async function clearEvaluationsForQuestionnaire(questionnaireId: string, includeLegacy = false): Promise<void> {
+  const database = await openDatabase()
+  await new Promise<void>((resolve, reject) => {
+    const transaction = database.transaction(STORE_NAME, 'readwrite')
+    const request = transaction.objectStore(STORE_NAME).openCursor()
+    request.onsuccess = () => {
+      const cursor = request.result
+      if (!cursor) return
+      const evaluation = cursor.value as Evaluation
+      if (evaluation.questionnaireId === questionnaireId || (includeLegacy && evaluation.questionnaireId === undefined)) cursor.delete()
+      cursor.continue()
+    }
+    request.onerror = () => reject(request.error)
+    transaction.oncomplete = () => { database.close(); resolve() }
+    transaction.onerror = () => { database.close(); reject(transaction.error) }
+  })
 }
 
 function isEvaluation(value: unknown): value is Evaluation {
@@ -56,6 +70,20 @@ function isEvaluation(value: unknown): value is Evaluation {
     && (item.questionnaireId === undefined || typeof item.questionnaireId === 'string')
     && (item.questionnaireVersion === undefined || (Number.isInteger(item.questionnaireVersion) && (item.questionnaireVersion as number) > 0))
     && (item.maxScore === undefined || (Number.isInteger(item.maxScore) && (item.maxScore as number) > 0 && (item.score as number) <= (item.maxScore as number)))
+    && (item.scoreBreakdown === undefined || (
+      Array.isArray(item.scoreBreakdown)
+      && item.scoreBreakdown.length > 0
+      && item.scoreBreakdown.every((entry) => {
+        if (!entry || typeof entry !== 'object') return false
+        const score = entry as Record<string, unknown>
+        return typeof score.id === 'string'
+          && typeof score.label === 'string'
+          && Number.isInteger(score.score) && (score.score as number) >= 0
+          && Number.isInteger(score.maxScore) && (score.maxScore as number) > 0
+          && (score.score as number) <= (score.maxScore as number)
+      })
+      && item.scoreBreakdown.reduce((total, entry) => total + ((entry as Record<string, unknown>).score as number), 0) === item.score
+    ))
     && (item.recommendation === undefined || (
       !!item.recommendation
       && typeof item.recommendation === 'object'

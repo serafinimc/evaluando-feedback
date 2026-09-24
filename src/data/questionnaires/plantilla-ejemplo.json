@@ -1,0 +1,32 @@
+{
+  "id": "plantilla-ejemplo",
+  "slug": "plantilla-ejemplo",
+  "name": "Plantilla de ejemplo",
+  "summary": "Un cuestionario sencillo para mostrar cómo funciona una hoja sin interpretación de resultados.",
+  "version": 1,
+  "heading": {
+    "eyebrow": "Ejemplo",
+    "title": "{count} preguntas de ejemplo",
+    "description": "Esta hoja muestra cómo registrar respuestas afirmativas sin una escala de puntuación."
+  },
+  "form": {
+    "instruction": "Marca las afirmaciones que quieras registrar como respuestas afirmativas."
+  },
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Primera pregunta?",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "text": "¿Segunda pregunta?",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "text": "¿Tercera pregunta?",
+      "points": 1
+    }
+  ]
+}

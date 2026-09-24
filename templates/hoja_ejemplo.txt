@@ -1,0 +1,18 @@
+NOMBRE: Nombre visible de la escala
+RUTA: nombre-de-la-escala
+RESUMEN: Una frase breve para la tarjeta de la biblioteca.
+SUBTITULO: Guía de reflexión
+TITULO: {count} preguntas para revisar este tema
+DESCRIPCION: Una explicación breve que aparecerá antes de las preguntas.
+INSTRUCCION: Marca únicamente las afirmaciones que sean ciertas.
+PAUSA: Un mensaje breve que aparecerá al final del resultado.
+
+[PREGUNTAS]
+¿Primera pregunta?
+¿Segunda pregunta con más peso? | 2
+¿Tercera pregunta?
+
+[RESULTADOS]
+3 | Resultado alto | Texto que explica qué significa este resultado.
+1 | Resultado intermedio | Texto para un resultado intermedio.
+0 | Resultado bajo | Texto para el resultado más bajo.

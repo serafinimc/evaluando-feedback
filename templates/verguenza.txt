@@ -1,0 +1,41 @@
+NOMBRE: Evaluando la vergüenza
+RUTA: verguenza
+ID: evaluando-verguenza
+RESUMEN: Una guía para evaluar hasta qué punto la vergüenza u otras emociones cohibidas están justificadas.
+SUBTITULO: Guía de reflexión
+TITULO: {count} preguntas para evaluar la vergüenza
+DESCRIPCION: Responde sí o no a partir de un evento y del comportamiento específico que deseas evaluar.
+INSTRUCCION: Marca únicamente las preguntas cuya respuesta sea SÍ. Las demás cuentan como NO.
+PAUSA: Usa este resultado como una guía para reflexionar sobre el evento y decidir qué reparación o acción puede ser útil.
+
+[PASOS]
+Identifica el evento, circunstancia o interacción que desencadenó la vergüenza u otras emociones cohibidas que deseas evaluar.
+Identifica el comportamiento específico que mostraste o que no mostraste durante el evento y que crees que pudo haber causado o contribuido a tu vergüenza o respuesta emocional de cohibición.
+Usa el evento y el comportamiento específico que acabas de identificar para responder cada pregunta con SÍ o NO.
+Suma las respuestas SÍ y usa las pautas de puntuación para determinar hasta qué punto tu vergüenza fue justificada, parcialmente justificada o injustificada.
+
+[ESCALA: determinantes | Preguntas determinantes]
+¿Mentí, inventé o dejé de revelar información importante a propósito para lograr una meta o beneficiarme a mí mismo?
+¿Mi comportamiento dañó significativamente una relación importante y/o causó un daño grave a otros miembros de la tribu o la comunidad misma, pero me benefició a mí mismo?
+¿Mi comportamiento resultó en una lesión física o psicológica grave a otra persona y/o mi tribu como resultado de mi negligencia, codicia, envidia, malicia o exceso de confianza?
+
+[NOTA: determinantes]
+Si respondiste SÍ a cualquiera de las tres preguntas anteriores, tu vergüenza u otra emoción cohibida está garantizada. Si respondiste NO a las tres, continúa con las preguntas siguientes para evaluar hasta qué punto está justificada.
+
+[ESCALA: restantes | Grado de justificación]
+¿He sido (o sería) reacio a hacer público y/o revelar, a las otras personas involucradas, mis intenciones ocultas durante el evento que desencadenó la vergüenza de conseguir lo que quiero o dificultar las cosas?
+¿He evitado reparar el daño que mi comportamiento pudo haber causado a las otras personas involucradas?
+¿Creo que sería importante corregir a un niño si se hubiera comportado de manera similar a como lo hice yo?
+¿Mi comportamiento traicionó o violó un acuerdo, compromiso o entendimiento tácito previo entre yo y las otras personas involucradas?
+¿Estaba yo en una posición de autoridad o poder sobre la(s) persona(s) involucrada(s) cuando ocurrió el evento que desencadenó mi vergüenza u otras emociones cohibidas?
+¿He tratado de justificar o defender mis acciones o la falta de acción que resultaron en daño o una ventaja injusta frente a personas que no estuvieron presentes en el evento o que estuvieron en el evento pero tienen una relación de poder inferior conmigo?
+¿Mi comunidad más amplia u observadores objetivos considerarían mi comportamiento inapropiado, irresponsable o poco ético, dada mi posición, mi rol o mi trabajo en el momento en que ocurrió?
+¿Mi vergüenza o culpa se refieren a la situación real en la que me encontraba en lugar de a eventos pasados similares?
+¿Me he involucrado en este tipo de comportamiento antes y otros me han dicho (o reconozco) que fue inapropiado o moral/éticamente incorrecto?
+¿He evitado de alguna manera y a propósito responder SÍ a alguna de estas preguntas?
+
+[RESULTADOS]
+determinantes | 1 | Vergüenza justificada | Una respuesta afirmativa en las preguntas determinantes indica que la vergüenza u otra emoción cohibida está justificada.
+restantes | 7 | Probablemente justificada | La vergüenza u otras emociones cohibidas probablemente están justificadas.
+restantes | 4 | Parcialmente justificada | La vergüenza u otras emociones cohibidas están parcialmente justificadas.
+restantes | 0 | Probablemente injustificada | La vergüenza u otras emociones cohibidas probablemente son injustificadas.

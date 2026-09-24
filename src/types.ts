@@ -7,7 +7,15 @@ export interface Evaluation {
   questionnaireId?: string
   questionnaireVersion?: number
   maxScore?: number
+  scoreBreakdown?: ScoreBreakdown[]
   recommendation?: Recommendation
+}
+
+export interface ScoreBreakdown {
+  id: string
+  label: string
+  score: number
+  maxScore: number
 }
 
 export interface Recommendation {
