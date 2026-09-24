@@ -1,0 +1,12 @@
+NOMBRE: Plantilla de ejemplo
+RUTA: plantilla-ejemplo
+RESUMEN: Un cuestionario sencillo para mostrar cómo funciona una hoja sin interpretación de resultados.
+SUBTITULO: Ejemplo
+TITULO: {count} preguntas de ejemplo
+DESCRIPCION: Esta hoja muestra cómo registrar respuestas afirmativas sin una escala de puntuación.
+INSTRUCCION: Marca las afirmaciones que quieras registrar como respuestas afirmativas.
+
+[PREGUNTAS]
+¿Primera pregunta?
+¿Segunda pregunta?
+¿Tercera pregunta?

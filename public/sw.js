@@ -1,15 +1,15 @@
-const CACHE = 'evaluando-feedback-v3'
-const APP_SHELL = ['./manifest.webmanifest', './favicon.svg', './icon.svg', './robots.txt', './llms.txt']
+const CACHE = 'mis-hojas-v4'
+const APP_SHELL = ['/manifest.webmanifest', '/favicon.svg', '/icon.svg', '/robots.txt', '/llms.txt']
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE)
-    const page = await fetch('./')
+    const page = await fetch('/')
     const html = await page.clone().text()
     const linkedFiles = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
       .map((match) => match[1])
-      .filter((path) => path.startsWith('./'))
-    await cache.put('./', page)
+      .filter((path) => path.startsWith('/'))
+    await cache.put('/', page)
     await cache.addAll([...new Set([...APP_SHELL, ...linkedFiles])])
     await self.skipWaiting()
   })())
@@ -32,6 +32,6 @@ self.addEventListener('fetch', (event) => {
         caches.open(CACHE).then((cache) => cache.put(event.request, copy))
       }
       return response
-    }).catch(() => caches.match('./'))),
+    }).catch(() => event.request.mode === 'navigate' ? caches.match('/') : undefined)),
   )
 })

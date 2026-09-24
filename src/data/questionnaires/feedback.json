@@ -1,5 +1,8 @@
 {
   "id": "evaluando-feedback",
+  "slug": "feedback",
+  "name": "Evaluando feedback",
+  "summary": "Una guía para decidir cuánto peso darle a los comentarios que recibiste.",
   "version": 1,
   "heading": {
     "eyebrow": "La escala",
@@ -32,6 +35,6 @@
       { "minScore": 3, "title": "Rechazar provisionalmente", "text": "Rechaza provisionalmente la retroalimentación, manteniendo la mente abierta." },
       { "minScore": 0, "title": "Rechazar el feedback", "text": "Rechaza la retroalimentación." }
     ],
-    "pauseNote": "Si estás activado/a, regula primero tu cuerpo. Luego vuelve a la escala con curiosidad."
+    "pauseNote": "Si estás activado/a, regula primero tu cuerpo. Luego vuelve a la actividad con curiosidad."
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "Evaluando feedback",
-  "short_name": "Feedback",
-  "description": "Evalúa feedback y guarda el historial de forma privada en tu dispositivo.",
+  "name": "Mis hojas",
+  "short_name": "Hojas",
+  "description": "Hojas de actividad con historiales privados guardados en tu dispositivo.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

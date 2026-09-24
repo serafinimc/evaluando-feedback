@@ -1,3 +1,3 @@
-# Evaluando feedback
+# Mis hojas de trabajo
 
-Aplicación privada y local para evaluar feedback mediante una escala de doce preguntas.
+Biblioteca de escalas breves con historiales privados guardados localmente en el dispositivo.
