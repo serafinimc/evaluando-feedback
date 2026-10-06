@@ -1,5 +1,163 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#17324D"/>
-  <path d="M135 142h242v167H241l-87 70v-70h-19z" fill="#fff"/>
-  <path d="m210 224 36 37 68-76" fill="none" stroke="#60D1CD" stroke-width="31" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     width="512"
+     height="512">
+
+  <!-- Fondo -->
+  <rect
+          width="512"
+          height="512"
+          rx="96"
+          fill="#f1f4f3"
+  />
+
+  <!-- Hoja -->
+  <rect
+          x="70"
+          y="62"
+          width="372"
+          height="388"
+          rx="30"
+          fill="#ffffff"
+          stroke="#243f3d"
+          stroke-width="18"
+  />
+
+  <!-- Primera caja -->
+  <rect
+          x="115"
+          y="122"
+          width="62"
+          height="62"
+          rx="8"
+          fill="#ffffff"
+          stroke="#243f3d"
+          stroke-width="14"
+  />
+
+  <!-- Check -->
+  <path
+          d="M128 153 L145 169 L181 128"
+          fill="none"
+          stroke="#28a99e"
+          stroke-width="16"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+  />
+
+  <!-- Primera línea -->
+  <path
+          d="M215 153 H347"
+          fill="none"
+          stroke="#687b79"
+          stroke-width="14"
+          stroke-linecap="round"
+  />
+
+  <!-- Segunda caja -->
+  <rect
+          x="115"
+          y="230"
+          width="62"
+          height="62"
+          rx="8"
+          fill="#ffffff"
+          stroke="#243f3d"
+          stroke-width="14"
+  />
+
+  <!-- Segunda línea -->
+  <path
+          d="M215 261 H347"
+          fill="none"
+          stroke="#687b79"
+          stroke-width="14"
+          stroke-linecap="round"
+  />
+
+  <!-- Tercera caja -->
+  <rect
+          x="115"
+          y="338"
+          width="62"
+          height="62"
+          rx="8"
+          fill="#ffffff"
+          stroke="#243f3d"
+          stroke-width="14"
+  />
+
+  <!-- Tercera línea -->
+  <path
+          d="M215 369 H347"
+          fill="none"
+          stroke="#687b79"
+          stroke-width="14"
+          stroke-linecap="round"
+  />
+
+  <!-- LÁPIZ -->
+
+  <!-- Cuerpo -->
+  <path
+          d="M300 53
+       L342 95
+       L195 242
+       L153 200
+       Z"
+          fill="#28a99e"
+          stroke="#243f3d"
+          stroke-width="14"
+          stroke-linejoin="round"
+  />
+
+  <!-- Goma -->
+  <path
+          d="M300 53
+       L322 31
+       Q332 21 342 31
+       L364 53
+       Q374 63 364 73
+       L342 95
+       Z"
+          fill="#e3f3f1"
+          stroke="#243f3d"
+          stroke-width="14"
+          stroke-linejoin="round"
+  />
+
+  <!-- Banda -->
+  <path
+          d="M283 70
+       L325 112
+       L342 95
+       L300 53
+       Z"
+          fill="#f8faf9"
+          stroke="#243f3d"
+          stroke-width="10"
+          stroke-linejoin="round"
+  />
+
+  <!-- Madera -->
+  <path
+          d="M153 200
+       L195 242
+       L137 258
+       Z"
+          fill="#e3f3f1"
+          stroke="#243f3d"
+          stroke-width="14"
+          stroke-linejoin="round"
+  />
+
+  <!-- Punta -->
+  <path
+          d="M137 258
+       L151 232
+       L163 244
+       Z"
+          fill="#243f3d"
+  />
+
 </svg>
